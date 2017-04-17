@@ -1,0 +1,5 @@
+name = Axlk2
+description = Drupal 7 Javascript Ajax Framework example from a link <b>as block</b>.
+package = my-sketches
+core = 7.x
+scripts[] = axjk2.js

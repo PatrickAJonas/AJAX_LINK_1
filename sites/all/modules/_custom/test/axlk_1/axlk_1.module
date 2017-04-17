@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Test ajax link example as block.
+ *
+ * This module provides a block that list of the
+ * 0 Level no original goods.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function axlk_1_help($path, $arg) {
+  if ($path == 'admin/help#axlk_1') {
+    return t('Level 0 no oroginal goods');
+  }
+}
+
+/**
+ * Implements hook_action_info().
+ */
+function axlk_1_block_info() {
+  $blocks = [];
+  $blocks['goods_output'] = [
+    'info' => t('Piking Goods'),
+    'cache' => DRUPAL_NO_CACHE,
+  ];
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function axlk_1_block_view($delta = '') {
+  if ($delta == 'axlk_1') {
+    $lists = goods_list();
+
+    /**
+     * @return array
+     *   Return list of current level goods
+     */
+    function goods_list() {
+      $goods_list = [];
+      return $goods_list;
+    }
+
+    $theme_args = ['items' => $lists, 'type' => 'ol'];
+    $content = theme('goods_list', $theme_args);
+
+    $block = [
+      'subject' => t('No Original Goods'),
+      'content' => $content,
+    ];
+    return $block;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function axlk_1_menu() {
+  $items = [];
+
+  $items['no-original-goods'] = [
+    'title' => 'No original goods',
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'no_original_goods',
+    'access arguments' => ['access content'],
+  ];
+
+  $items['my-ajax-test/%'] = [
+    'title' => 'List',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'ajax_link_callback',
+    'page arguments' => [1],
+    'access arguments' => ['access content'],
+  ];
+  return $items;
+}
+
+///**
+// * Implements axlk_1_block_view().
+// *
+// * @param string $delta
+// *   Comment.
+// *
+// * @return array
+// *   Comment.
+// */
+//function axlk_1_view($delta = '') {
+//  $block = [];
+//  switch ($delta) {
+//    case 'goods_output';
+//      $block['subject'] = t('No original goods');
+//      $block['content'] = goods_list();
+//
+//      /**
+//       * Return list of no original goods.
+//       */
+//      function goods_list() {
+//        return t('Goods');
+//      }
+//
+//      break;
+//  }
+//  return $block;
+//}

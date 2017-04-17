@@ -1,0 +1,5 @@
+name = "Ajax Test"
+description = "Drupal 7 Javascript Ajax Framework example from a link"
+package = my-example
+core = 7.x
+scripts[] = ajax_link.js

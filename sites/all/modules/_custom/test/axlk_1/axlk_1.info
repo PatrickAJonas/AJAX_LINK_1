@@ -1,0 +1,5 @@
+name = Axlk 1
+description = Test ajax link example as block.
+package = my-tests
+core = 7.x
+scripts[] = axlk_1.js

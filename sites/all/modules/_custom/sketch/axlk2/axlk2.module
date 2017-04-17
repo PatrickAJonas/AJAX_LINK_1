@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Drupal 7 Javascript Ajax Framework example from a link as block.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function axlj2_help($path, $arg) {
+  if ($path == 'admin/help#axlk2') {
+    return t('Drupal 7 Javascript Ajax Framework example from a link as block.');
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function axlk2_block_info() {
+  $blocks = [];
+  $blocks['axlk2'] = [
+    'info' => t('Drupal 7 Javascript Ajax Framework example from a link as block.'),
+    'cache' => DRUPAL_NO_CACHE,
+  ];
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function axlk2_block_view($delta = '') {
+
+}

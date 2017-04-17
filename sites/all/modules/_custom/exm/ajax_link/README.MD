@@ -1,0 +1,4 @@
+# [Drupal 7 Javascript Ajax Framework example from a link](http://codekarate.com/blog/drupal-7-javascript-ajax-framework-example-link)
+For a Daily Dose of Drupal episode that covers this blog post topic as well, take a look at [Drupal 7 Ajax Framework Link Example](http://codekarate.com/daily-dose-of-drupal/drupal-7-ajax-framework-link-example).
+
+After struggling to find documentation on how to take advantage of the [Drupal Ajax Framework](http://api.drupal.org/api/drupal/includes%21ajax.inc/group/ajax/7) with just a simple HTML link I decided to provide an example to anyone else who might be struggling with the same problem. The documentation on drupal.org is very detailed, however most of the documentation centers around using the Drupal 7 Ajax Framework with forms. In this case I just want to use the Drupal 7 Ajax Framework with a simple link.
