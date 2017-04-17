@@ -1,0 +1,10 @@
+name = First
+description = A description of what your module does.
+package = my-example
+core = 7.x
+version = 7.x-0.1
+files[] = first.modules
+files[] = first.test
+
+;dependencies[] = aoutoload
+php = 7.0.16
