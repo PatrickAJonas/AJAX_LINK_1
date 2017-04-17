@@ -8,7 +8,7 @@
 /**
  * Implements hook_help().
  */
-function axlj2_help($path, $arg) {
+function axlk2_help($path, $arg) {
   if ($path == 'admin/help#axlk2') {
     return t('Drupal 7 Javascript Ajax Framework example from a link as block.');
   }
