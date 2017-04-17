@@ -30,5 +30,11 @@ function axlk2_block_info() {
  * Implements hook_block_view().
  */
 function axlk2_block_view($delta = '') {
-
+  if (isset($delta)) {
+    $block = [
+      'subject' => t('No Original Parts'),
+      'content' => t('List of No original goods'),
+    ];
+    return $block;
+  }
 }
